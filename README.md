@@ -15,7 +15,6 @@ http://gburtini.github.io/jquery-z-stack/example.html
 Inside elements can be "complex" in the sense that they may be made up of multiple fields themselves, simply pass a div or subcontainer in insideElement. The stack will be kept open as long as there is an input element inside the subcontainers currently focused. You may wish to edit this behavior.
 
 ## License
-License
 Please retain this notice in ALL redistributions as well as a link back to the original repository.
 
 Copyright 2015 Giuseppe Burtini https://github.com/gburtini
