@@ -7,9 +7,9 @@ http://gburtini.github.io/jquery-z-stack/example.html
 ## Usage
 1. Include jQuery (a recent version, 1.8 or greater!)
 2. Include the JS file.
-3. Create a container for your stacked groups. Give it an identifiable selector (e.g., class or ID), say #textareaContainer.
+3. Create a container for your stacked groups. Give it an identifiable selector (e.g., class or ID), say ``#textareaContainer``.
 4. Create some inside elements like textareas (or other input elements) inside this container. See note below about complex inside elements.
-5. Call stackableWidgets(parentContainer = "textareaContainer", insideElement = "textarea")
+5. Call ``stackableWidgets(parentContainer = "textareaContainer", insideElement = "textarea")``
 
 ### Complex Inside Elements.
 Inside elements can be "complex" in the sense that they may be made up of multiple fields themselves, simply pass a div or subcontainer in insideElement. The stack will be kept open as long as there is an input element inside the subcontainers currently focused. You may wish to edit this behavior.
