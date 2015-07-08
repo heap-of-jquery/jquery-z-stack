@@ -1,4 +1,6 @@
 function stackableWidgets(parent, fields) {
+	var $ = jQuery;
+	
 	$(parent).css({
 		position: "relative", 
 		display: "inline-block"
@@ -9,7 +11,9 @@ function stackableWidgets(parent, fields) {
 			return;
 		var position = $(parent).find(fields).first().position();
 		$(parent).data("spanner-first-position", position);
-		var top = pos.top, left = pos.left, opacity=1, zind = 10;
+		
+		// TODO: make opacity/zindex start from default too.
+		var top = position.top, left = position.left, opacity=1, zind = 10;
 		
 			
 		$(parent).find(fields).each(function() {
