@@ -11,7 +11,7 @@ http://gburtini.github.io/jquery-z-stack/example.html
 4. Create some inside elements like textareas (or other input elements) inside this container. See note below about complex inside elements.
 5. Call ``stackableWidgets(parentContainer = "textareaContainer", insideElement = "textarea")``
 
-### Complex Inside Elements.
+### Complex Inside Elements
 Inside elements can be "complex" in the sense that they may be made up of multiple fields themselves, simply pass a div or subcontainer in insideElement. The stack will be kept open as long as there is an input element inside the subcontainers currently focused. You may wish to edit this behavior.
 
 ## License
