@@ -4,7 +4,7 @@ function stackableWidgets(parent, fields) {
 		display: "inline-block"
 	});
 
-	function spanTextareas() {
+	var spanTextareas = function() {
 		var top = 0, left = 0, opacity=1, zind = 10;
 		if($(parent).data("spanner-lock") == true) 
 				return;
@@ -31,7 +31,7 @@ function stackableWidgets(parent, fields) {
 		});
 	}
 
-	function despanTextareas() {
+	var despanTextareas = function() {
 		var that = $(this)
 		var top = 0; 
 		$(this).find(fields).stop().each(function() {
