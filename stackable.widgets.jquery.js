@@ -4,7 +4,7 @@ function stackableWidgets(parent, fields) {
 		display: "inline-block"
 	});
 
-	var spanTextareas = function() {
+	var stackTextareas = function() {
 		var top = 0, left = 0, opacity=1, zind = 10;
 		if($(parent).data("spanner-lock") == true) 
 				return;
@@ -31,7 +31,7 @@ function stackableWidgets(parent, fields) {
 		});
 	}
 
-	var despanTextareas = function() {
+	var destackTextareas = function() {
 		var that = $(this)
 		var top = 0; 
 		$(this).find(fields).stop().each(function() {
@@ -43,10 +43,10 @@ function stackableWidgets(parent, fields) {
 			top += parseInt($(this).css("height"))+10;
 		})
 	}
-	spanTextareas();
+	stackTextareas();
 
 
-	$(parent).hover(despanTextareas, spanTextareas)
+	$(parent).hover(destackTextareas, stackTextareas)
 	
 	$(parent).find(fields).find(":input").addBack(":input").focus(function() {
 		$(parent).data("spanner-lock", true);
@@ -56,7 +56,7 @@ function stackableWidgets(parent, fields) {
 		$(parent).data("spanner-lock", false);
 		setTimeout(function() {
 			// check in a short period if we refocused another tool, otherwise collapse
-			spanTextareas();
+			stackTextareas();
 		}, 50)
 	});
 }
