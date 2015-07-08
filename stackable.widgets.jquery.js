@@ -5,9 +5,12 @@ function stackableWidgets(parent, fields) {
 	});
 
 	var stackTextareas = function() {
-		var top = 0, left = 0, opacity=1, zind = 10;
 		if($(parent).data("spanner-lock") == true) 
-				return;
+			return;
+		var position = $(parent).find(fields).first().position();
+		$(parent).data("spanner-first-position", position);
+		var top = pos.top, left = pos.left, opacity=1, zind = 10;
+		
 			
 		$(parent).find(fields).each(function() {
 			$(this).css({
@@ -33,11 +36,12 @@ function stackableWidgets(parent, fields) {
 
 	var destackTextareas = function() {
 		var that = $(this)
-		var top = 0; 
+		var pos = $(parent).data("spanner-first-position", position);
+		var top = pos.top; 
 		$(this).find(fields).stop().each(function() {
 			$(this).animate({
 				top: top, 
-				left: 0,
+				left: pos.left,
 				opacity:1
 			},200);
 			top += parseInt($(this).css("height"))+10;
