@@ -2,7 +2,7 @@
 Easily stack textareas (or any other interactive widget) in Z-space.
 
 ## Demo
-http://gburtini.github.io/jquery-z-stack/example.html
+http://heap-of-jquery.github.io/jquery-z-stack/example.html
 
 ## Usage
 1. Include jQuery (a recent version, 1.8 or greater!)
